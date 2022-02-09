@@ -92,7 +92,7 @@ for vote in rows:
             if vote[5] == "Yes":
                 notedAbstain.append(memberAssociation)
 
-result_strings = ["Motion Results:", "For: " + str(votesFor), "Against: " + str(votesAgainst), "Abstain: " + str(votesAbstain)]
+result_strings = ["Motion Results:\n", "For: " + str(votesFor), "\nAgainst: " + str(votesAgainst), "\nAbstain: " + str(votesAbstain)]
 
 is_noted = False
 
@@ -126,7 +126,7 @@ if len(notedAbstain) > 1:
         formatted_string += n +", "
     result_strings.append(formatted_string)
 
-output_file = open("motionresults", "w")
+output_file = open("motionresults.txt", "w")
 output_file.writelines(result_strings)
 output_file.close()
 print(result_strings)
